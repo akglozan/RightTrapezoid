@@ -131,6 +131,7 @@
     <ClInclude Include="righttrapezoid.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="polygon.cpp" />
     <ClCompile Include="righttrapezoid.cpp" />
   </ItemGroup>
