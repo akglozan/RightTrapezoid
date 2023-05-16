@@ -20,7 +20,10 @@ protected:
 	float height;
 	float topSide;
 	float bottomSide;
-	float Side();
+	double Side();
+
+	float Area();
+	float Perimeter();
 
 	
 
@@ -33,7 +36,7 @@ public:
 	RightTrap(RightTrap& X);
 
 	//Destructor
-	virtual ~RightTrap();
+	~RightTrap();
 
 	//Assignment overloading
 	RightTrap& operator = (RightTrap& X);
@@ -53,6 +56,9 @@ public:
 	//Object printout for diagnostic
 	void Dump();
 
+	void Draw();
+
+	
 };
 
 

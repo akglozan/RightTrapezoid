@@ -3,9 +3,19 @@
 #include "polygon.h"
 #include "righttrapezoid.h"
 
-float RightTrap::Side()
+double RightTrap::Side()
 {
-	return 0.0f;
+	return sqrt(pow(height,2)*pow(bottomSide-topSide,2));
+}
+
+float RightTrap::Area()
+{
+	return (height*(topSide+bottomSide))/2;
+}
+
+float RightTrap::Perimeter()
+{
+	return height+bottomSide+topSide+Side();
 }
 
 RightTrap::RightTrap()
@@ -13,6 +23,7 @@ RightTrap::RightTrap()
 	height = 0.0f;
 	topSide = 0.0f;
 	bottomSide = 0.0f;
+	Side();
 
 	cout << "Default Right Trapezoid" << endl;
 
@@ -41,17 +52,20 @@ RightTrap& RightTrap::operator=(RightTrap& X)
 
 bool RightTrap::operator==(RightTrap& X)
 {
-	return false;// da guardare
+	return false;
 }
 
 void RightTrap::Init()
 {
+	Reset();
+	perimeter = 0.;
+	area = 0.;
 }
 
 void RightTrap::Init(RightTrap& X)
 {
 	Reset();
-	//da finire
+
 }
 
 void RightTrap::Reset()
@@ -60,6 +74,7 @@ void RightTrap::Reset()
 	height = 0.;
 	topSide = 0.;
 	bottomSide = 0.;
+	Side();
 
 }
 
@@ -70,7 +85,11 @@ void RightTrap::Dump()
 	cout << "Height = " << height << endl;
 	cout << "Top Side = " << topSide << endl;
 	cout << "Bottom Side = " << bottomSide << endl;
-	//need to output oblique side
-	
+	cout << "Oblique Side = " << Side() << endl;
 
+}
+
+void RightTrap::Draw()
+{
+	cout << "A drawing of a right trapezoid" << endl;
 }
