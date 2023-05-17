@@ -3,20 +3,28 @@
 #include "polygon.h"
 #include "righttrapezoid.h"
 
+
+/// @brief Defines the value of oblique side
+/// @return Returns the value of oblique side
 double RightTrap::Side()
 {
 	return sqrt(pow(height,2)*pow(bottomSide-topSide,2));
 }
 
+/// @brief Defines the value of right trapezoid's area
+/// @return Returns the value of right trapezoid's area
 float RightTrap::Area()
 {
 	return (height*(topSide+bottomSide))/2;
 }
 
+/// @brief Defines the value of right trapezoid's perimeter
+/// @return Returns the value of right trapezoid's perimeter
 float RightTrap::Perimeter()
 {
 	return height+bottomSide+topSide+Side();
 }
+
 
 RightTrap::RightTrap()
 {
