@@ -26,6 +26,7 @@ float RightTrap::Perimeter()
 }
 
 
+
 RightTrap::RightTrap()
 {
 	height = 0.0f;
@@ -33,19 +34,19 @@ RightTrap::RightTrap()
 	bottomSide = 0.0f;
 	Side();
 
-	cout << "Default Right Trapezoid" << endl;
+	cout << "Default - Right Trapezoid " << endl;
 
 }
 
 RightTrap::RightTrap(RightTrap& X)
 {
-	cout << "Copy Right Trapezoid" << endl;
+	cout << "Copy - Right Trapezoid" << endl;
 	Init(X);
 }
 
 RightTrap::~RightTrap()
 {
-	cout << "Right Trapezoid Destructor" << endl;
+	cout << "Destructor - Right Trapezoid " << endl;
 	Reset();
 }
 
@@ -78,7 +79,7 @@ void RightTrap::Init(RightTrap& X)
 
 void RightTrap::Reset()
 {
-	cout << "Reset Right Trapezoid" << endl;
+	cout << "Reset - Right Trapezoid" << endl;
 	height = 0.;
 	topSide = 0.;
 	bottomSide = 0.;
@@ -93,7 +94,8 @@ void RightTrap::Dump()
 	cout << "Height = " << height << endl;
 	cout << "Top Side = " << topSide << endl;
 	cout << "Bottom Side = " << bottomSide << endl;
-	cout << "Oblique Side = " << Side() << endl;
+	cout << "Oblique Side = " << Side() << "\n\n";
+
 
 }
 

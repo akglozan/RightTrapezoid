@@ -5,6 +5,10 @@
 
 int main()
 {
+	RightTrap a;
 
+	a.Draw();
+
+	a.Dump();
 
 }
