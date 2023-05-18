@@ -4,5 +4,6 @@ var searchData=
   ['rectangle_2ecpp_1',['rectangle.cpp',['../rectangle_8cpp.html',1,'']]],
   ['rectangle_2eh_2',['rectangle.h',['../rectangle_8h.html',1,'']]],
   ['reset_3',['Reset',['../class_polygon.html#a0049882c6d5d7fda0fed6f9bcb4271d2',1,'Polygon']]],
-  ['righttrap_4',['RightTrap',['../class_right_trap.html',1,'']]]
+  ['righttrap_4',['RightTrap',['../class_right_trap.html',1,'RightTrap'],['../class_right_trap.html#a83c5b4e1a7f919063a11201551f07b98',1,'RightTrap::RightTrap()']]],
+  ['righttrapezoid_5',['RightTrapezoid',['../class_right_trapezoid.html',1,'']]]
 ];
