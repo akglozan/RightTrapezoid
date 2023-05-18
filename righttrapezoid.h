@@ -48,8 +48,14 @@ public:
 	///Copy Constructor
 	RightTrap(const RightTrap& X);
 
+	/// @brief Init Constructor
+	/// @param h height
+	/// @param ts topside
+	/// @param bs bottomside
+	RightTrap(float h, float ts, float bs);
+
 	///Destructor
-	~RightTrap();
+	virtual ~RightTrap();
 	///@}
 
 
@@ -57,10 +63,10 @@ public:
 
 
 	//Assignment overloading
-	RightTrap& operator = (RightTrap& X);
+	RightTrap& operator = (const RightTrap& X);
 
 	//Comparison overloading
-	bool operator==(RightTrap& X);
+	bool operator==(const RightTrap& X);
 
 	/// @name Setters
 	/// @{
@@ -96,6 +102,10 @@ public:
 
 	//Object printout for diagnostic
 	void Dump();
+
+	void ErrorMessage(const char* string);
+	void WarningMessage(const char* string);
+
 
 
 	
