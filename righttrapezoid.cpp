@@ -6,7 +6,7 @@
 
 /// @brief Defines the value of oblique side
 /// @return Returns the value of oblique side
-double RightTrap::Side()
+double RightTrap::ObliqueSide()
 {
 	return sqrt(pow(height,2)*pow(bottomSide-topSide,2));
 }
@@ -22,8 +22,17 @@ float RightTrap::Area()
 /// @return Returns the value of right trapezoid's perimeter
 float RightTrap::Perimeter()
 {
-	return height+bottomSide+topSide+Side();
+	return height+bottomSide+topSide+ObliqueSide();
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32,7 +41,7 @@ RightTrap::RightTrap()
 	height = 0.0f;
 	topSide = 0.0f;
 	bottomSide = 0.0f;
-	Side();
+	ObliqueSide();
 
 	cout << "Default - Right Trapezoid " << endl;
 
@@ -64,6 +73,104 @@ bool RightTrap::operator==(RightTrap& X)
 	return false;
 }
 
+
+
+
+void RightTrap::SetHeight(float h)
+{
+	if (h < 0.)
+	{
+		cout << "Warning: Right Trapezoid - SetHeight\nHeight should be >0" << endl;
+		return;
+	}
+
+	height = h;
+}
+
+void RightTrap::SetTopSide(float ts)
+{
+	if (ts < 0.)
+	{
+		cout << "Warning: Right Trapezoid - SetTopSide\nTop side should be >0" << endl;
+		return;
+	}
+
+	topSide = ts;
+}
+
+void RightTrap::SetBottomSide(float bs)
+{
+	if (bs < 0.)
+	{
+		cout << "Warning: Right Trapezoid - SetBottomSide\nBottom side should be >0" << endl;
+		return;
+	}
+
+	bottomSide = bs;
+
+}
+
+
+void RightTrap::SetDim(float h, float ts, float bs)
+{
+	SetHeight(h);
+	SetTopSide(ts);
+	SetBottomSide(bs);
+
+}
+
+float RightTrap::GetHeight()
+{
+	return height;
+}
+
+float RightTrap::GetTopSide()
+{
+	return topSide;
+}
+
+float RightTrap::GetBottomSide()
+{
+	return bottomSide;
+}
+
+float RightTrap::GetObliqueSide()
+{
+	return ObliqueSide();
+}
+
+float RightTrap::GetDim(float& h, float& ts, float& bs,float &os)
+{
+	h = height;
+	ts = topSide;
+	bs = bottomSide;
+	os = ObliqueSide();
+	
+}
+
+float RightTrap::GetArea()
+{
+	return (height * (topSide + bottomSide)) / 2;
+}
+
+float RightTrap::GetPerimeter()
+{
+	return height + topSide + bottomSide + ObliqueSide();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void RightTrap::Init()
 {
 	Reset();
@@ -83,7 +190,7 @@ void RightTrap::Reset()
 	height = 0.;
 	topSide = 0.;
 	bottomSide = 0.;
-	Side();
+	ObliqueSide();
 
 }
 
@@ -94,7 +201,7 @@ void RightTrap::Dump()
 	cout << "Height = " << height << endl;
 	cout << "Top Side = " << topSide << endl;
 	cout << "Bottom Side = " << bottomSide << endl;
-	cout << "Oblique Side = " << Side() << "\n\n";
+	cout << "Oblique Side = " << ObliqueSide() << "\n\n";
 
 
 }

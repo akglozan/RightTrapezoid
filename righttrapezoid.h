@@ -20,7 +20,7 @@ protected:
 	float height;
 	float topSide;
 	float bottomSide;
-	double Side();
+	double ObliqueSide();
 
 	float Area();
 	float Perimeter();
@@ -38,11 +38,35 @@ public:
 	//Destructor
 	~RightTrap();
 
+
+
+
+
+
 	//Assignment overloading
 	RightTrap& operator = (RightTrap& X);
 
 	//Comparison overloading
 	bool operator==(RightTrap& X);
+
+
+	void SetHeight(float h);
+	void SetTopSide(float ts);
+	void SetBottomSide(float bs);
+	
+	void SetDim(float h, float ts, float bs);
+
+	float GetHeight();
+	float GetTopSide();
+	float GetBottomSide();
+	float GetObliqueSide();
+
+	float GetDim(float &h, float &ts, float &bs, float& os);
+	float GetArea();
+	float GetPerimeter();
+
+
+
 
 	//Default initialization
 	void Init();
@@ -56,6 +80,8 @@ public:
 	//Object printout for diagnostic
 	void Dump();
 
+
+	
 	void Draw();
 
 	
