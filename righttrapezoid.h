@@ -33,7 +33,7 @@ public:
 	RightTrap();
 
 	//Copy Constructor
-	RightTrap(RightTrap& X);
+	RightTrap(const RightTrap& X);
 
 	//Destructor
 	~RightTrap();
@@ -49,12 +49,14 @@ public:
 	//Comparison overloading
 	bool operator==(RightTrap& X);
 
-
+	/// @name Getters
+	/// @{
 	void SetHeight(float h);
 	void SetTopSide(float ts);
 	void SetBottomSide(float bs);
 	
 	void SetDim(float h, float ts, float bs);
+	/// @} 
 
 	float GetHeight();
 	float GetTopSide();
@@ -69,7 +71,7 @@ public:
 
 
 	//Default initialization
-	void Init();
+	//void Init();
 
 	//Copy initialization
 	void Init(RightTrap& X);

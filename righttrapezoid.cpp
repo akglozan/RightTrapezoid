@@ -34,8 +34,8 @@ float RightTrap::Perimeter()
 
 
 
-
-
+/// @name Default Constuctor
+/// @brief Creates a default constructor of right trapezoid
 RightTrap::RightTrap()
 {
 	height = 0.0f;
@@ -47,18 +47,26 @@ RightTrap::RightTrap()
 
 }
 
-RightTrap::RightTrap(RightTrap& X)
+/// @name Copy Constuctor
+/// @brief Creates a copy constructor of right trapezoid
+/// @param X da risolvere
+RightTrap::RightTrap(const RightTrap& X)
 {
-	cout << "Copy - Right Trapezoid" << endl;
+	cout << "Copy Constuctor - Right Trapezoid" << endl;
 	Init(X);
 }
 
+
+/// @name Destructor of Right Trapezoid
 RightTrap::~RightTrap()
 {
 	cout << "Destructor - Right Trapezoid " << endl;
 	Reset();
 }
 
+/// @brief overload of operator =
+/// @param X 
+/// @return 
 RightTrap& RightTrap::operator=(RightTrap& X)
 {
 	Reset();
@@ -119,6 +127,9 @@ void RightTrap::SetDim(float h, float ts, float bs)
 
 }
 
+
+
+
 float RightTrap::GetHeight()
 {
 	return height;
@@ -171,37 +182,47 @@ float RightTrap::GetPerimeter()
 
 
 
-void RightTrap::Init()
-{
-	Reset();
-	perimeter = 0.;
-	area = 0.;
-}
+//void RightTrap::Init()//devo fare una modifica
+//{
+//	Reset();
+//	
+//}
 
 void RightTrap::Init(RightTrap& X)
 {
-	Reset();
+	height = X.height;
+	topSide = X.topSide;
+	bottomSide = X.bottomSide;
+
+	area = X.area;
+	perimeter = X.perimeter;
 
 }
 
 void RightTrap::Reset()
 {
 	cout << "Reset - Right Trapezoid" << endl;
+
 	height = 0.;
 	topSide = 0.;
 	bottomSide = 0.;
 	ObliqueSide();
 
+	perimeter = 0.;
+	area = 0.;
 }
 
 void RightTrap::Dump()
 {
 	Polygon::Dump();
 
-	cout << "Height = " << height << endl;
-	cout << "Top Side = " << topSide << endl;
-	cout << "Bottom Side = " << bottomSide << endl;
-	cout << "Oblique Side = " << ObliqueSide() << "\n\n";
+	cout << "Height = " << GetHeight << endl;
+	cout << "Top Side = " << GetTopSide << endl;
+	cout << "Bottom Side = " << GetBottomSide << endl;
+	cout << "Oblique Side = " << ObliqueSide() << endl;
+
+	cout << "Area = " << GetArea() << endl;
+	cout << "Perimeter = " << GetPerimeter << "\n\n";
 
 
 }
