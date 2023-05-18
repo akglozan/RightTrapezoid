@@ -4,6 +4,9 @@
 	Details.
 */
 
+#include "polygon.h"
+#include <math.h>
+
 
 #ifndef RHOMBUS_H
 #define RHOMBUS_H
@@ -12,7 +15,7 @@ using namespace std;
 
 /// @class Rhombus
 /// @brief to manage an object with the shape of a rhombus
-class Rhombus
+class Rhombus:public Polygon
 {
 private:
 	float diagH;
@@ -31,6 +34,14 @@ public:
 	Rhombus& operator=(const Rhombus &r); 
 	bool operator==(const Rhombus &r);
 
+
+	void Init();
+	void Init(const Rhombus& r);
+	void Reset();
+
+	float Area();
+	float Perimeter();
+
 	
 	void SetDim(float dH, float dV);
 	void SetDiagH(float dH);
@@ -43,6 +54,11 @@ public:
 	
 	float GetArea();
 	float GetPerimeter();
+
+
+	void ErrorMessage(const char* string);
+	void WarningMessage(const char* string);
+	void Dump();
 	
 
 };

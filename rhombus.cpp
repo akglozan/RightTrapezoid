@@ -1,6 +1,11 @@
 #include "rhombus.h"
 #include<iostream>
 
+float Rhombus::Side()//da calcolare
+{
+	return 0.0f;
+}
+
 Rhombus::Rhombus()
 {
 
@@ -94,7 +99,14 @@ void Rhombus::SetDim(float dH, float dV)
 	SetDiagV(dV);
 }
 
-//void GetDiagonals(float& dH, float& dV); to do
+
+
+void Rhombus::GetDiagonals(float& dH, float& dV)
+{
+	dH = diagH;
+	dV = diagV;
+	return;
+}
 
 float Rhombus:: GetDiagH()
 {
@@ -107,8 +119,21 @@ float Rhombus::GetDiagV()
 	return diagV;
 }
 
+float Rhombus::GetSide()
+{
+	return Side();
+}
 
-//float GetSide();
-//
-//float GetArea();
-//float GetPerimeter();  to do 
+float Rhombus::GetArea()
+{
+
+	return 0.0f;
+}
+
+float Rhombus::GetPerimeter()
+{
+	return 0.0f;
+}
+
+
+
