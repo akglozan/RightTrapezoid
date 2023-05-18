@@ -20,9 +20,17 @@ protected:
 	float height;
 	float topSide;
 	float bottomSide;
+
+/// @brief Defines the value of oblique side
+/// @return Returns the value of oblique side
 	double ObliqueSide();
 
+/// @brief Defines the value of right trapezoid's area
+/// @return Returns the value of right trapezoid's area
 	float Area();
+
+/// @brief Defines the value of right trapezoid's perimeter
+/// @return Returns the value of right trapezoid's perimeter
 	float Perimeter();
 
 	
@@ -49,7 +57,7 @@ public:
 	//Comparison overloading
 	bool operator==(RightTrap& X);
 
-	/// @name Getters
+	/// @name Setters
 	/// @{
 	void SetHeight(float h);
 	void SetTopSide(float ts);
@@ -58,12 +66,14 @@ public:
 	void SetDim(float h, float ts, float bs);
 	/// @} 
 
+
+
 	float GetHeight();
 	float GetTopSide();
 	float GetBottomSide();
 	float GetObliqueSide();
 
-	float GetDim(float &h, float &ts, float &bs, float& os);
+	void GetDim(float &h, float &ts, float &bs, float& os);
 	float GetArea();
 	float GetPerimeter();
 
@@ -71,7 +81,7 @@ public:
 
 
 	//Default initialization
-	//void Init();
+	void Init();
 
 	//Copy initialization
 	void Init(RightTrap& X);

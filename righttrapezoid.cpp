@@ -161,12 +161,14 @@ float RightTrap::GetDim(float& h, float& ts, float& bs,float &os)
 
 float RightTrap::GetArea()
 {
-	return (height * (topSide + bottomSide)) / 2;
+	area = Area();
+	return area;
 }
 
 float RightTrap::GetPerimeter()
 {
-	return height + topSide + bottomSide + ObliqueSide();
+	perimeter = Perimeter();
+	return perimeter;
 }
 
 
@@ -182,11 +184,11 @@ float RightTrap::GetPerimeter()
 
 
 
-//void RightTrap::Init()//devo fare una modifica
-//{
-//	Reset();
-//	
-//}
+void RightTrap::Init()//devo fare una modifica
+{
+	Reset();
+	
+}
 
 void RightTrap::Init(RightTrap& X)
 {
@@ -216,13 +218,13 @@ void RightTrap::Dump()
 {
 	Polygon::Dump();
 
-	cout << "Height = " << GetHeight << endl;
-	cout << "Top Side = " << GetTopSide << endl;
-	cout << "Bottom Side = " << GetBottomSide << endl;
+	cout << "Height = " << GetHeight() << endl;
+	cout << "Top Side = " << GetTopSide() << endl;
+	cout << "Bottom Side = " << GetBottomSide() << endl;
 	cout << "Oblique Side = " << ObliqueSide() << endl;
 
 	cout << "Area = " << GetArea() << endl;
-	cout << "Perimeter = " << GetPerimeter << "\n\n";
+	cout << "Perimeter = " << GetPerimeter() << "\n\n";
 
 
 }

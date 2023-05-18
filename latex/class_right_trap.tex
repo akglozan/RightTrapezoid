@@ -7,28 +7,37 @@ Inheritance diagram for Right\+Trap\+:\begin{figure}[H]
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
+\begin{Indent}\textbf{ Default Constuctor}\par
+{\em Creates a default constructor of right trapezoid }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_right_trap_a3483d48fc8364f439a0cc72d3c6b5d6d}\label{class_right_trap_a3483d48fc8364f439a0cc72d3c6b5d6d}} 
+{\bfseries Right\+Trap} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Copy Constuctor}\par
+{\em Creates a copy constructor of right trapezoid
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & da risolvere \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_right_trap_a83c5b4e1a7f919063a11201551f07b98}\label{class_right_trap_a83c5b4e1a7f919063a11201551f07b98}} 
+{\bfseries Right\+Trap} (const \mbox{\hyperlink{class_right_trap}{Right\+Trap}} \&X)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Destructor of Right Trapezoid}\par
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_right_trap_ab8cefafae69a7484a6363af25801fc56}\label{class_right_trap_ab8cefafae69a7484a6363af25801fc56}} 
-{\bfseries Right\+Trap} (\mbox{\hyperlink{class_right_trap}{Right\+Trap}} \&X)
+\mbox{\Hypertarget{class_right_trap_a316a8541c8f0878638f37b3cff325283}\label{class_right_trap_a316a8541c8f0878638f37b3cff325283}} 
+{\bfseries $\sim$\+Right\+Trap} ()
 \item 
-\mbox{\Hypertarget{class_right_trap_aee76c1d14d18457806ef870bc2356836}\label{class_right_trap_aee76c1d14d18457806ef870bc2356836}} 
-\mbox{\hyperlink{class_right_trap}{Right\+Trap}} \& {\bfseries operator=} (\mbox{\hyperlink{class_right_trap}{Right\+Trap}} \&X)
-\item 
+\mbox{\hyperlink{class_right_trap}{Right\+Trap}} \& \mbox{\hyperlink{class_right_trap_aee76c1d14d18457806ef870bc2356836}{operator=}} (\mbox{\hyperlink{class_right_trap}{Right\+Trap}} \&X)
+\begin{DoxyCompactList}\small\item\em overload of operator = \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_right_trap_a537dc28f8c0b171363ef4f336812f2df}\label{class_right_trap_a537dc28f8c0b171363ef4f336812f2df}} 
 bool {\bfseries operator==} (\mbox{\hyperlink{class_right_trap}{Right\+Trap}} \&X)
-\item 
-\mbox{\Hypertarget{class_right_trap_a3e8a0ce287e90313501839ca1ee2bdf3}\label{class_right_trap_a3e8a0ce287e90313501839ca1ee2bdf3}} 
-void {\bfseries Set\+Height} (float h)
-\item 
-\mbox{\Hypertarget{class_right_trap_a905fc0d0fe9b541d56188ad81b8838cb}\label{class_right_trap_a905fc0d0fe9b541d56188ad81b8838cb}} 
-void {\bfseries Set\+Top\+Side} (float ts)
-\item 
-\mbox{\Hypertarget{class_right_trap_a096cdcc02bf57d8f6ea89a86185b9c40}\label{class_right_trap_a096cdcc02bf57d8f6ea89a86185b9c40}} 
-void {\bfseries Set\+Bottom\+Side} (float bs)
-\item 
-\mbox{\Hypertarget{class_right_trap_a97d3cb1169d03751e455e08a97b3e744}\label{class_right_trap_a97d3cb1169d03751e455e08a97b3e744}} 
-void {\bfseries Set\+Dim} (float h, float ts, float bs)
 \item 
 \mbox{\Hypertarget{class_right_trap_a682d5c5fe81ffff55d68ac0a47d2efa7}\label{class_right_trap_a682d5c5fe81ffff55d68ac0a47d2efa7}} 
 float {\bfseries Get\+Height} ()
@@ -43,7 +52,7 @@ float {\bfseries Get\+Bottom\+Side} ()
 float {\bfseries Get\+Oblique\+Side} ()
 \item 
 \mbox{\Hypertarget{class_right_trap_a6cb524256c829288bc3f9311543aa6f9}\label{class_right_trap_a6cb524256c829288bc3f9311543aa6f9}} 
-float {\bfseries Get\+Dim} (float \&h, float \&ts, float \&bs, float \&os)
+void {\bfseries Get\+Dim} (float \&h, float \&ts, float \&bs, float \&os)
 \item 
 \mbox{\Hypertarget{class_right_trap_a1937e0087f792598a9045bba5380daa0}\label{class_right_trap_a1937e0087f792598a9045bba5380daa0}} 
 float {\bfseries Get\+Area} ()
@@ -65,6 +74,23 @@ void {\bfseries Dump} ()
 \item 
 void \mbox{\hyperlink{class_right_trap_a168012a53cac3ddc348a33e6e1c5dfe7}{Draw}} ()
 \end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_right_trap_a3e8a0ce287e90313501839ca1ee2bdf3}\label{class_right_trap_a3e8a0ce287e90313501839ca1ee2bdf3}} 
+void {\bfseries Set\+Height} (float h)
+\item 
+\mbox{\Hypertarget{class_right_trap_a905fc0d0fe9b541d56188ad81b8838cb}\label{class_right_trap_a905fc0d0fe9b541d56188ad81b8838cb}} 
+void {\bfseries Set\+Top\+Side} (float ts)
+\item 
+\mbox{\Hypertarget{class_right_trap_a096cdcc02bf57d8f6ea89a86185b9c40}\label{class_right_trap_a096cdcc02bf57d8f6ea89a86185b9c40}} 
+void {\bfseries Set\+Bottom\+Side} (float bs)
+\item 
+\mbox{\Hypertarget{class_right_trap_a97d3cb1169d03751e455e08a97b3e744}\label{class_right_trap_a97d3cb1169d03751e455e08a97b3e744}} 
+void {\bfseries Set\+Dim} (float h, float ts, float bs)
+\end{DoxyCompactItemize}
+\end{Indent}
 \doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_polygon}{Polygon}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -186,6 +212,25 @@ Defines the value of oblique side.
 
 \begin{DoxyReturn}{Returns}
 Returns the value of oblique side 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_right_trap_aee76c1d14d18457806ef870bc2356836}\label{class_right_trap_aee76c1d14d18457806ef870bc2356836}} 
+\index{RightTrap@{RightTrap}!operator=@{operator=}}
+\index{operator=@{operator=}!RightTrap@{RightTrap}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_right_trap}{Right\+Trap}} \& Right\+Trap\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_right_trap}{Right\+Trap}} \&}]{X }\end{DoxyParamCaption})}
+
+
+
+overload of operator = 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+~\newline
+ 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_right_trap_a8575e1fbecba662c84672e008f432680}\label{class_right_trap_a8575e1fbecba662c84672e008f432680}} 
 \index{RightTrap@{RightTrap}!Perimeter@{Perimeter}}
