@@ -1,15 +1,9 @@
 
 #include "polygon.h"
 #include "righttrapezoid.h"
+#include "rectangle.h"
 
-//create a menu with 5 options consisting of
-/*
-1-rettangolo
-2-rhombus
-3-right trapezoid
-4-draw
-5-exit
-*/
+
 int main()
 {
 
@@ -20,6 +14,8 @@ int main()
 		int option;
 		int control = 0;
 
+		RightTrap test;
+
 		cout << "Choose one of the following options" << endl;
 		cout << " 1 - Rectangle\n 2 - Rhombus\n 3 - Right Trapezoid\n 4 - Draw\n 5-Exit" << endl;
 	
@@ -28,7 +24,7 @@ int main()
 		switch (option)
 		{
 		case 1:
-
+		//	Rectangle esempio;
 
 			control++;
 			break;
@@ -37,6 +33,7 @@ int main()
 			control++;
 			break;
 		case 3:
+			
 
 			control++;
 			break;

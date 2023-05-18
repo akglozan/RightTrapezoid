@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7epolygon_0',['~Polygon',['../class_polygon.html#ace39c67107966db12e13a183f496c3b0',1,'Polygon']]]
+  ['warningmessage_0',['WarningMessage',['../class_polygon.html#aadfc52c992fe7459a9a4529de5f46a81',1,'Polygon']]]
 ];

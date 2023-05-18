@@ -38,24 +38,111 @@ Inheritance diagram for Right\+Trap\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em overload of operator = \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_right_trap_a537dc28f8c0b171363ef4f336812f2df}\label{class_right_trap_a537dc28f8c0b171363ef4f336812f2df}} 
 bool {\bfseries operator==} (\mbox{\hyperlink{class_right_trap}{Right\+Trap}} \&X)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_right_trap_a3e8a0ce287e90313501839ca1ee2bdf3}\label{class_right_trap_a3e8a0ce287e90313501839ca1ee2bdf3}} 
+void {\bfseries Set\+Height} (float h)
+\item 
+\mbox{\Hypertarget{class_right_trap_a905fc0d0fe9b541d56188ad81b8838cb}\label{class_right_trap_a905fc0d0fe9b541d56188ad81b8838cb}} 
+void {\bfseries Set\+Top\+Side} (float ts)
+\item 
+\mbox{\Hypertarget{class_right_trap_a096cdcc02bf57d8f6ea89a86185b9c40}\label{class_right_trap_a096cdcc02bf57d8f6ea89a86185b9c40}} 
+void {\bfseries Set\+Bottom\+Side} (float bs)
+\item 
+\mbox{\Hypertarget{class_right_trap_a97d3cb1169d03751e455e08a97b3e744}\label{class_right_trap_a97d3cb1169d03751e455e08a97b3e744}} 
+void {\bfseries Set\+Dim} (float h, float ts, float bs)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Height Getter}\par
+{\em Gets the height of right trapezoid
+
+\begin{DoxyReturn}{Returns}
+Height 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_right_trap_a682d5c5fe81ffff55d68ac0a47d2efa7}\label{class_right_trap_a682d5c5fe81ffff55d68ac0a47d2efa7}} 
 float {\bfseries Get\+Height} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Top Side Getter}\par
+{\em Gets the top side of right trapezoid
+
+\begin{DoxyReturn}{Returns}
+Top Side 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_right_trap_a0c62bac8622bae728c0d76c35fb81971}\label{class_right_trap_a0c62bac8622bae728c0d76c35fb81971}} 
 float {\bfseries Get\+Top\+Side} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Bottom Side Getter}\par
+{\em Gets the bottom side of right trapezoid
+
+\begin{DoxyReturn}{Returns}
+Bottom Side 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_right_trap_a529a6fcd42b517e4876b3aca85f7b6bf}\label{class_right_trap_a529a6fcd42b517e4876b3aca85f7b6bf}} 
 float {\bfseries Get\+Bottom\+Side} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Oblique Side Getter}\par
+{\em Gets the oblique side of right trapezoid
+
+\begin{DoxyReturn}{Returns}
+Oblique Side 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_right_trap_a3bb1f355457ebc01eecbb8a8e80be20f}\label{class_right_trap_a3bb1f355457ebc01eecbb8a8e80be20f}} 
 float {\bfseries Get\+Oblique\+Side} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Dimension Getter}\par
+{\em Gets the dimensions of right trapezoid
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Height \\
+\hline
+{\em ts} & Top Side \\
+\hline
+{\em bs} & Bottom Side \\
+\hline
+{\em os} & Oblique Side \\
+\hline
+\end{DoxyParams}
+}\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_right_trap_a6cb524256c829288bc3f9311543aa6f9}\label{class_right_trap_a6cb524256c829288bc3f9311543aa6f9}} 
+\mbox{\Hypertarget{class_right_trap_ae621d056db111a8cf244b3efaa155be9}\label{class_right_trap_ae621d056db111a8cf244b3efaa155be9}} 
 void {\bfseries Get\+Dim} (float \&h, float \&ts, float \&bs, float \&os)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Area Getter}\par
+{\em Gets the area of right trapezoid
+
+\begin{DoxyReturn}{Returns}
+Area of right trapezoid 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_right_trap_a1937e0087f792598a9045bba5380daa0}\label{class_right_trap_a1937e0087f792598a9045bba5380daa0}} 
 float {\bfseries Get\+Area} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Perimeter Getter}\par
+{\em Gets the perimetere of right trapezoid
+
+\begin{DoxyReturn}{Returns}
+Perimeter 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_right_trap_a562d4887955ce941aeb3973cda666a82}\label{class_right_trap_a562d4887955ce941aeb3973cda666a82}} 
 float {\bfseries Get\+Perimeter} ()
@@ -73,22 +160,6 @@ void {\bfseries Reset} ()
 void {\bfseries Dump} ()
 \item 
 void \mbox{\hyperlink{class_right_trap_a168012a53cac3ddc348a33e6e1c5dfe7}{Draw}} ()
-\end{DoxyCompactItemize}
-\end{Indent}
-\begin{Indent}\textbf{ Setters}\par
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_right_trap_a3e8a0ce287e90313501839ca1ee2bdf3}\label{class_right_trap_a3e8a0ce287e90313501839ca1ee2bdf3}} 
-void {\bfseries Set\+Height} (float h)
-\item 
-\mbox{\Hypertarget{class_right_trap_a905fc0d0fe9b541d56188ad81b8838cb}\label{class_right_trap_a905fc0d0fe9b541d56188ad81b8838cb}} 
-void {\bfseries Set\+Top\+Side} (float ts)
-\item 
-\mbox{\Hypertarget{class_right_trap_a096cdcc02bf57d8f6ea89a86185b9c40}\label{class_right_trap_a096cdcc02bf57d8f6ea89a86185b9c40}} 
-void {\bfseries Set\+Bottom\+Side} (float bs)
-\item 
-\mbox{\Hypertarget{class_right_trap_a97d3cb1169d03751e455e08a97b3e744}\label{class_right_trap_a97d3cb1169d03751e455e08a97b3e744}} 
-void {\bfseries Set\+Dim} (float h, float ts, float bs)
 \end{DoxyCompactItemize}
 \end{Indent}
 \doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_polygon}{Polygon}}}

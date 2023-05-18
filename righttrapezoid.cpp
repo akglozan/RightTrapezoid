@@ -53,7 +53,7 @@ RightTrap::RightTrap()
 RightTrap::RightTrap(const RightTrap& X)
 {
 	cout << "Copy Constuctor - Right Trapezoid" << endl;
-	Init(X);
+	//Init(X);
 }
 
 
@@ -82,8 +82,9 @@ bool RightTrap::operator==(RightTrap& X)
 }
 
 
-
-
+/// @name Height setter
+/// @brief Sets height of right trapezoid
+/// @param h Height
 void RightTrap::SetHeight(float h)
 {
 	if (h < 0.)
@@ -95,6 +96,9 @@ void RightTrap::SetHeight(float h)
 	height = h;
 }
 
+/// @name Top Side Setter
+/// @brief Sets top side of right trapezoid
+/// @param ts Top Side
 void RightTrap::SetTopSide(float ts)
 {
 	if (ts < 0.)
@@ -106,6 +110,9 @@ void RightTrap::SetTopSide(float ts)
 	topSide = ts;
 }
 
+/// @name Bottom Side Setter
+/// @brief Sets bottom side of right trapezoid
+/// @param bs Bottom Side
 void RightTrap::SetBottomSide(float bs)
 {
 	if (bs < 0.)
@@ -118,7 +125,11 @@ void RightTrap::SetBottomSide(float bs)
 
 }
 
-
+/// @name Dimension Setter
+/// @brief Sets the dimensions of right trapezoid
+/// @param h Height
+/// @param ts Top Side
+/// @param bs Bottom Side
 void RightTrap::SetDim(float h, float ts, float bs)
 {
 	SetHeight(h);
@@ -128,43 +139,66 @@ void RightTrap::SetDim(float h, float ts, float bs)
 }
 
 
-
-
+/// @name Height Getter
+/// @brief Gets the height of right trapezoid
+/// @return Height
 float RightTrap::GetHeight()
 {
 	return height;
 }
 
+/// @name Top Side Getter
+/// @brief Gets the top side of right trapezoid
+/// @return Top Side
 float RightTrap::GetTopSide()
 {
 	return topSide;
 }
 
+/// @name Bottom Side Getter
+/// @brief Gets the bottom side of right trapezoid
+/// @return Bottom Side
 float RightTrap::GetBottomSide()
 {
 	return bottomSide;
 }
 
+/// @name Oblique Side Getter
+/// @brief Gets the oblique side of right trapezoid
+/// @return Oblique Side
 float RightTrap::GetObliqueSide()
 {
 	return ObliqueSide();
 }
 
-float RightTrap::GetDim(float& h, float& ts, float& bs,float &os)
+/// @name Dimension Getter
+/// @brief Gets the dimensions of right trapezoid
+/// @param h Height
+/// @param ts Top Side
+/// @param bs Bottom Side
+/// @param os Oblique Side
+void RightTrap::GetDim(float& h, float& ts, float& bs,float &os)
 {
 	h = height;
 	ts = topSide;
 	bs = bottomSide;
 	os = ObliqueSide();
 	
+	return;
 }
 
+/// @name Area Getter
+/// @brief Gets the area of right trapezoid
+/// @return Area of right trapezoid
 float RightTrap::GetArea()
 {
 	area = Area();
 	return area;
 }
 
+/// @name Perimeter Getter
+/// @brief Gets the perimetere of right trapezoid
+/// @return Perimeter
 float RightTrap::GetPerimeter()
 {
 	perimeter = Perimeter();

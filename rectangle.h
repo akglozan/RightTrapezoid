@@ -4,6 +4,7 @@
 	Details.
 */
 
+#include "polygon.h"
 
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
@@ -12,9 +13,9 @@ using namespace std;
 
 /// @class Rectangle
 /// @brief to manage an object with the shape of a rectangle
-class Rectangle
+class Rectangle: public Polygon
 {
-private:
+protected:
 	float length;
 	float width;
 
