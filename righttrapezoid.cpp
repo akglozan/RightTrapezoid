@@ -53,7 +53,7 @@ RightTrap::RightTrap()
 RightTrap::RightTrap(const RightTrap& X)
 {
 	cout << "Copy Constuctor - Right Trapezoid" << endl;
-	//Init(X);
+	Init(X);
 }
 
 
@@ -224,7 +224,7 @@ void RightTrap::Init()//devo fare una modifica
 	
 }
 
-void RightTrap::Init(RightTrap& X)
+void RightTrap::Init(const RightTrap& X)
 {
 	height = X.height;
 	topSide = X.topSide;

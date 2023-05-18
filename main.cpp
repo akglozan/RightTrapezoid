@@ -14,7 +14,7 @@ int main()
 		int option;
 		int control = 0;
 
-		RightTrap test;
+	
 
 		cout << "Choose one of the following options" << endl;
 		cout << " 1 - Rectangle\n 2 - Rhombus\n 3 - Right Trapezoid\n 4 - Draw\n 5-Exit" << endl;
@@ -24,26 +24,34 @@ int main()
 		switch (option)
 		{
 		case 1:
-		//	Rectangle esempio;
+		{
+	//	Rectangle test;
 
 			control++;
 			break;
+		}
 		case 2:
-
+		{
 			control++;
+
 			break;
+		}
 		case 3:
-			
+		{
+			RightTrap test;
 
 			control++;
 			break;
+		}
 		case 4:
-
+		{
 			break;
+		}
 		case 5:
-			exit;
+		{	
 			break;
-
+		break;
+		}
 		default:
 			cout << "Please enter a valid option" << endl;
 

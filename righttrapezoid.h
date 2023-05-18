@@ -10,7 +10,8 @@
 
 #include "polygon.h"
 
-
+/// @class Right Trapezoid
+/// @brief To manage an object with the shape of a right trapezoid
 class RightTrap :public Polygon
 {
 private:
@@ -84,7 +85,7 @@ public:
 	void Init();
 
 	//Copy initialization
-	void Init(RightTrap& X);
+	void Init(const RightTrap& X);
 
 	//Delete object
 	void Reset();
