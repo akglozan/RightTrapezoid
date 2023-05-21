@@ -10,7 +10,7 @@ int main()
 	bool exit = false;
 	int option = -1;
 
-	float polygons[100] = { };
+	Polygon *polygons[100] = { };
 
 	while (!exit)
 	{
@@ -36,7 +36,17 @@ int main()
 		{
 		case 1:
 		{
-			Rectangle test;
+			Rectangle* X = new Rectangle;
+
+			cout << "Enter basic values for your rectangle such as width and length in order" << endl;
+
+			float w, l;
+			scanf("%f", &w);
+			scanf("%f", &l);
+
+			X->SetDim(w, l);
+
+			polygons[control] = X;
 
 			control++;
 			break;
@@ -51,7 +61,10 @@ int main()
 		}
 		case 3:
 		{
-			RightTrap test;
+			RightTrap* X = new RightTrap;
+
+
+
 
 			control++;
 			break;

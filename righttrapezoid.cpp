@@ -41,7 +41,7 @@ RightTrap::RightTrap()
 	height = 0.0f;
 	topSide = 0.0f;
 	bottomSide = 0.0f;
-	ObliqueSide();
+	
 
 	cout << "Default - Right Trapezoid " << endl;
 
@@ -49,7 +49,7 @@ RightTrap::RightTrap()
 
 /// @name Copy Constuctor
 /// @brief Creates a copy constructor of right trapezoid
-/// @param X da risolvere
+/// @param X A right trapezoid object
 RightTrap::RightTrap(const RightTrap& X)
 {
 	cout << "Copy Constuctor - Right Trapezoid" << endl;
@@ -57,6 +57,10 @@ RightTrap::RightTrap(const RightTrap& X)
 }
 
 
+/// @brief Creates a standard constructor of right trapezoid
+/// @param h height
+/// @param ts top side
+/// @param bs bottom side
 RightTrap::RightTrap(float h, float ts, float bs)
 {
 	cout << "Constructor with parameters - Right Trapezoid" << endl;
@@ -97,7 +101,7 @@ RightTrap& RightTrap::operator=(const RightTrap& X)
 
 bool RightTrap::operator==(const RightTrap& X)
 {
-	return false;
+	return ((X.bottomSide == bottomSide && X.height == height && X.topSide == topSide) ? true : false);
 }
 
 
@@ -204,6 +208,16 @@ void RightTrap::GetDim(float& h, float& ts, float& bs,float &os)
 	os = ObliqueSide();
 	
 	return;
+}
+
+float RightTrap::GetArea()
+{
+	return Area();
+}
+
+float RightTrap::GetPerimeter()
+{
+	return Perimeter();
 }
 
 

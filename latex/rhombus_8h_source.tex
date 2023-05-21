@@ -1,0 +1,60 @@
+\hypertarget{rhombus_8h_source}{}\doxysection{rhombus.\+h}
+\mbox{\hyperlink{rhombus_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{polygon_8h}{polygon.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ RHOMBUS\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ RHOMBUS\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rhombus}{Rhombus}}:\textcolor{keyword}{public}\ \mbox{\hyperlink{class_polygon}{Polygon}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ diagH;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ diagV;}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ Side();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_rhombus}{Rhombus}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_rhombus}{Rhombus}}(\textcolor{keywordtype}{float}\ dH,\ \textcolor{keywordtype}{float}\ dV);}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_rhombus}{Rhombus}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rhombus}{Rhombus}}\ \&r);}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_rhombus}{\string~Rhombus}}();}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_rhombus}{Rhombus}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rhombus}{Rhombus}}\ \&r);\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rhombus}{Rhombus}}\ \&r);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ Init(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_rhombus}{Rhombus}}\&\ r);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ Reset();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ Area();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ Perimeter();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDim(\textcolor{keywordtype}{float}\ dH,\ \textcolor{keywordtype}{float}\ dV);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDiagH(\textcolor{keywordtype}{float}\ dH);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ SetDiagV(\textcolor{keywordtype}{float}\ dV);}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ GetDiagonals(\textcolor{keywordtype}{float}\ \&dH,\ \textcolor{keywordtype}{float}\ \&dV);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ GetDiagH();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{float}\ GetDiagV();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ ErrorMessage(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keywordtype}{string});}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ WarningMessage(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keywordtype}{string});}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ Dump();}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
