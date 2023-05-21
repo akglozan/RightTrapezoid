@@ -67,7 +67,7 @@ RightTrap::~RightTrap()
 /// @brief overload of operator =
 /// @param X 
 /// @return 
-RightTrap& RightTrap::operator=(RightTrap& X)
+RightTrap& RightTrap::operator=(const RightTrap& X)
 {
 	Reset();
 	Init(X);
@@ -76,7 +76,7 @@ RightTrap& RightTrap::operator=(RightTrap& X)
 	return *this;
 }
 
-bool RightTrap::operator==(RightTrap& X)
+bool RightTrap::operator==(const RightTrap& X)
 {
 	return false;
 }
@@ -263,7 +263,29 @@ void RightTrap::Dump()
 
 }
 
+
+
 void RightTrap::Draw()
 {
 	cout << "A drawing of a right trapezoid" << endl;
+
+	cout << "Height: " << height << endl;
+	cout << "Top Side: " <<  topSide << endl;
+	cout << "Bottom Side: " << bottomSide << endl;
+	cout << "Oblique Side: " << ObliqueSide() << endl;
+
+	cout << "Area: " << Area() << endl;
+	cout << "Perimeter: " << Perimeter() << endl;
+}
+
+void RightTrap::ErrorMessage(const char* string)
+{
+	cout <<"Error -- Right Trapezoid -- ";
+	cout << string << endl;
+}
+
+void RightTrap::WarningMessage(const char* string)
+{
+	cout << endl << "WARNING -- Right Trapezoid --";
+	cout << string << endl;
 }

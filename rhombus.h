@@ -50,10 +50,6 @@ public:
 	void GetDiagonals(float &dH, float &dV);
 	float GetDiagH();
 	float GetDiagV();
-	float GetSide();
-	
-	float GetArea();
-	float GetPerimeter();
 
 
 	void ErrorMessage(const char* string);

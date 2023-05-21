@@ -1,9 +1,9 @@
 #include "rhombus.h"
 #include<iostream>
 
-float Rhombus::Side()//da calcolare
+float Rhombus::Side()
 {
-	return 0.0f;
+	return (float)(sqrt(diagH*diagH+diagV*diagV)/2);
 }
 
 Rhombus::Rhombus()
@@ -24,11 +24,11 @@ Rhombus::Rhombus(float dH, float dV)
 
 	cout << "Rhombus - constructor" << endl;
 
-	if (diagH <= 0.)
+	if (dH <= 0.)
 		cout << "WARNING: Rhombus - constructor: diagH should be >0" << endl;
 	else diagH = dH;
 
-	if (diagV <= 0.)
+	if (dV <= 0.)
 		cout << "WARNING: Rhombus - constructor: diagV should be >0" << endl;
 	else diagV = dV;
 
@@ -48,8 +48,13 @@ Rhombus::~Rhombus()
 {
 
 	cout << "Rhombus - destructor" << endl;
-
+	Reset();
 }
+
+
+
+
+
 
 Rhombus& Rhombus::operator=(const Rhombus& r) 
 {
@@ -70,6 +75,38 @@ bool Rhombus::operator==(const Rhombus& r)
 
 	return false;
 
+}
+
+void Rhombus::Init()
+{
+	Reset();
+	cout << " - Rhombus initialized - " << endl;
+
+}
+
+void Rhombus::Init(const Rhombus& r)
+{
+	Reset();
+
+	diagH = r.diagH;
+	diagV = r.diagV;
+}
+
+void Rhombus::Reset()
+{
+	diagH = (float)0;
+	diagV = (float)0;
+
+}
+
+float Rhombus::Area()
+{
+	return (float)((diagH*diagV)/2);
+}
+
+float Rhombus::Perimeter()
+{
+	return (float)4 *(Side());
 }
 
 
@@ -119,20 +156,34 @@ float Rhombus::GetDiagV()
 	return diagV;
 }
 
-float Rhombus::GetSide()
-{
-	return Side();
+
+
+
+
+void Rhombus::ErrorMessage(const char* string) {
+
+	cout << "ERROR -- Rhombus --" << endl;
+	cout << string << endl;
+
 }
 
-float Rhombus::GetArea()
+void Rhombus::WarningMessage(const char* string)
 {
-
-	return 0.0f;
+	cout << "Warning -- Rhombus --" << endl;
+	cout << string << endl;
 }
 
-float Rhombus::GetPerimeter()
+void Rhombus::Dump()
 {
-	return 0.0f;
+
+	cout << "Rhombus -- Dump" << endl;
+
+	cout << "Horizontal Diagonal: " << diagH << endl;
+	cout << "Vertical Diagonal: " << diagV << endl;
+
+	Polygon::Dump();
+
+
 }
 
 

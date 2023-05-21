@@ -14,9 +14,6 @@
 /// @brief To manage an object with the shape of a right trapezoid
 class RightTrap :public Polygon
 {
-private:
-	
-
 protected:
 
 	float height;
