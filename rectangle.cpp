@@ -149,20 +149,25 @@ void Rectangle::GetDim(float &w, float &l) {
 	return;
 }
 
-/// @brief get the area of the object
-/// @return area of the rectangle
-float Rectangle::GetArea() {
 
+
+float Rectangle::Area()
+{
 	return width * length;
-
 }
 
-/// @brief get the perimeter of the object
-/// @return perimeter of the rectangle
-float Rectangle::GetPerimeter() {
-
+float Rectangle::Perimeter()
+{
 	return 2 * (width + length);
-
 }
 
+void Rectangle::Draw()
+{
+	cout << "Width is : " << width << endl;
+	cout << "Length is : " << length << endl;
+
+	cout << "Area is : " << Area() << endl;
+	cout << "Perimeter is : " << Perimeter()<< endl;
+
+}
 

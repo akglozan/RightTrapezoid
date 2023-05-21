@@ -38,9 +38,11 @@ public:
 	void GetDim(float &w, float &l);
 	float GetLength();
 	float GetWidth();
+
+	float Area();
+	float Perimeter();
 	
-	float GetArea();
-	float GetPerimeter();
+	void Draw();
 	
 
 };

@@ -57,6 +57,25 @@ RightTrap::RightTrap(const RightTrap& X)
 }
 
 
+RightTrap::RightTrap(float h, float ts, float bs)
+{
+	cout << "Constructor with parameters - Right Trapezoid" << endl;
+
+	if (h <= .0)
+		WarningMessage("Height should be bigger than 0");
+	else
+		height = h;
+	if (ts <= .0)
+		WarningMessage("Top side should be bigger than 0");
+	else
+		topSide = ts;
+	if (bs <= .0)
+		WarningMessage("Bottom side should be bigger than 0");
+	else
+		bottomSide = bs;
+
+}
+
 /// @name Destructor of Right Trapezoid
 RightTrap::~RightTrap()
 {
@@ -187,23 +206,7 @@ void RightTrap::GetDim(float& h, float& ts, float& bs,float &os)
 	return;
 }
 
-/// @name Area Getter
-/// @brief Gets the area of right trapezoid
-/// @return Area of right trapezoid
-float RightTrap::GetArea()
-{
-	area = Area();
-	return area;
-}
 
-/// @name Perimeter Getter
-/// @brief Gets the perimetere of right trapezoid
-/// @return Perimeter
-float RightTrap::GetPerimeter()
-{
-	perimeter = Perimeter();
-	return perimeter;
-}
 
 
 
@@ -252,13 +255,8 @@ void RightTrap::Dump()
 {
 	Polygon::Dump();
 
-	cout << "Height = " << GetHeight() << endl;
-	cout << "Top Side = " << GetTopSide() << endl;
-	cout << "Bottom Side = " << GetBottomSide() << endl;
-	cout << "Oblique Side = " << ObliqueSide() << endl;
 
-	cout << "Area = " << GetArea() << endl;
-	cout << "Perimeter = " << GetPerimeter() << "\n\n";
+	Draw();
 
 
 }
@@ -269,9 +267,9 @@ void RightTrap::Draw()
 {
 	cout << "A drawing of a right trapezoid" << endl;
 
-	cout << "Height: " << height << endl;
-	cout << "Top Side: " <<  topSide << endl;
-	cout << "Bottom Side: " << bottomSide << endl;
+	cout << "Height: " << GetHeight() << endl;
+	cout << "Top Side: " <<  GetTopSide()<< endl;
+	cout << "Bottom Side: " << GetBottomSide() << endl;
 	cout << "Oblique Side: " << ObliqueSide() << endl;
 
 	cout << "Area: " << Area() << endl;
