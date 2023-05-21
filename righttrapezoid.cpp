@@ -87,9 +87,16 @@ RightTrap::~RightTrap()
 	Reset();
 }
 
-/// @brief overload of operator =
-/// @param X 
-/// @return 
+
+
+
+
+
+
+
+/// @brief Assignment operator
+/// @param X Right trapezoid object
+/// @return said object
 RightTrap& RightTrap::operator=(const RightTrap& X)
 {
 	Reset();
@@ -99,10 +106,23 @@ RightTrap& RightTrap::operator=(const RightTrap& X)
 	return *this;
 }
 
+
+/// @brief Comparison operator for copy constructor and protected params
+/// @param X Right trapezoid operator
+/// @return true if said values are equal else false
 bool RightTrap::operator==(const RightTrap& X)
 {
 	return ((X.bottomSide == bottomSide && X.height == height && X.topSide == topSide) ? true : false);
 }
+
+
+
+
+
+
+
+
+
 
 
 /// @name Height setter
@@ -160,6 +180,11 @@ void RightTrap::SetDim(float h, float ts, float bs)
 	SetBottomSide(bs);
 
 }
+
+
+
+
+
 
 
 /// @name Height Getter
